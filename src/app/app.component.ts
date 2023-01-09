@@ -3,11 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: ` <div class="app">
-    <h1 (click)="handleClick()">{{ message }}</h1>
-    <h1 [innerText]="message.length ? message : 'Nothing here' "></h1>
-    <h1>{{ newMessage }}</h1>
-    <input [value]="message" (input)="handleInput($event)" #messageInput>
-    <p> {{ messageInput.value }}</p>
+    <app-donut-list></app-donut-list>
   </div> `,
   styles: [
     `
