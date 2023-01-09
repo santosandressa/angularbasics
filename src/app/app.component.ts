@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: ` <div class="app">
-    <header>
+    <header class="header">
       <img src="/assets/img/logo.svg" alt="Ultimate Donuts" class="logo">
     </header>
     <donut-list></donut-list>
@@ -25,7 +25,7 @@ import { Component, OnInit } from '@angular/core';
         margin-bottom: 25px;
       }
 
-      .logo{
+      .logo {
         width: 100px;
         height: 80px;
       }
