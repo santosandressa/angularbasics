@@ -2,10 +2,12 @@ import { Donut } from './../../models/donut.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-donut-list',
+  selector: 'donut-list',
   template: `
   <div>
-    <app-donut-card [donut]="donuts[0]"></app-donut-card>
+    <donut-card [donut]="donuts[0]"></donut-card>
+    <donut-card [donut]="donuts[1]"></donut-card>
+    <donut-card [donut]="donuts[2]"></donut-card>
   </div>
   `,
   styles: [],
@@ -22,6 +24,7 @@ export class DonutListComponent implements OnInit {
         name: 'Just chocolate donut',
         icon: 'just-chocolate',
         price: 119,
+        promo: true,
         description: 'For the pure chocoholic.',
       },
       {
@@ -29,6 +32,7 @@ export class DonutListComponent implements OnInit {
         name: 'Glazed Fugde',
         icon: 'glazed-fudge',
         price: 129,
+        promo: false,
         description: 'Sticky perfection.',
       },
       {
@@ -36,6 +40,7 @@ export class DonutListComponent implements OnInit {
         name: 'Caramel Swirl',
         icon: 'caramel-swirl',
         price: 119,
+        promo: false,
         description: 'Chocolate drizzled with caramel.',
       },
     ];
