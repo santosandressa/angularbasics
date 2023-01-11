@@ -4,9 +4,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'donut-card',
   template: `
-    <div class="donut-card" [ngStyle]="{
-      border: donut.promo ? '2px solid #eee' : 'none'
-    }">
+    <div class="donut-card" [class.donut-card-promo]="donut.promo">
       <img
         src="/assets/img/{{ donut.icon }}.svg"
         alt="donut.name"
@@ -40,6 +38,9 @@ import { Component, Input } from '@angular/core';
         &-icon {
           width: 50px;
           margin-right: 10px;
+        }
+        &-promo{
+         border: 2px solid #eee;
         }
       }
     `,
