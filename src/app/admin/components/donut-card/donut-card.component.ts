@@ -4,7 +4,9 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'donut-card',
   template: `
-    <div class="donut-card" [class.donut-card-promo]="donut.promo">
+    <div class="donut-card" [ngClass]="{
+      'donut-card-promo': donut.promo
+    }">
       <img
         src="/assets/img/{{ donut.icon }}.svg"
         alt="donut.name"
@@ -12,7 +14,7 @@ import { Component, Input } from '@angular/core';
       />
       <div>
         <p class="donut-card-name">{{ donut.name }}</p>
-        <p class="donut-card-price">{{ donut.price }}</p>
+        <p class="donut-card-price">{{ donut.price / 10 | currency: 'USD':'symbol'}}</p>
       </div>
     </div>
   `,
@@ -33,6 +35,7 @@ import { Component, Input } from '@angular/core';
           font-size: 16px;
         }
         &-price {
+          padding: 5px;
           color: #c14583;
         }
         &-icon {
