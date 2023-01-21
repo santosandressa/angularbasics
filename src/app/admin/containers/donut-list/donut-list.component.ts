@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   selector: 'donut-list',
   template: `
   <div>
-    <div *ngIf="donuts.length">
+    <ng-container *ngIf="donuts.length">
       <donut-card [donut]="donuts[0]"></donut-card>
       <donut-card [donut]="donuts[1]"></donut-card>
       <donut-card [donut]="donuts[2]"></donut-card>
-    </div>
+    </ng-container>
 
   </div>
   `,
