@@ -5,4 +5,8 @@
   <p> {{ message === 'Hello World' }} </p>
   <p> {{ message.length }} </p>
   <p> {{ message.length ? message : 'No message' }} </p>
+
+  // property binding
+  <p [innerText]="message"></p>
+  <input type="text" [value]="message" />
 </div>
