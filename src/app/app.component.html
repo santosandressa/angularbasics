@@ -17,4 +17,8 @@
 
   <input [value]="message" (input)="handleInput($event)">
 
+  <!-- template ref variables -->
+  <input #messageInput [value]="message" (input)="newMessage = messageInput.value">
+  <p>{{ messageInput.value }}</p>
+
 </div>
