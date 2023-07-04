@@ -8,8 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   message!: string;
+  newMessage!: string;
 
   ngOnInit() {
     this.message = 'This is a interpolated value';
   }
+
+  // event binding
+  onClick(event: Event) {
+    console.log(event);
+  }
+
+  handleInput(event: Event) {
+    const { value } = event.target as HTMLInputElement;
+    console.log(value);
+    this.newMessage = value;
+  }
+
+
+
 }

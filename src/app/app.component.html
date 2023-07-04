@@ -2,11 +2,19 @@
   Hello Angular
 
   <p>{{ message }}</p>
-  <p> {{ message === 'Hello World' }} </p>
-  <p> {{ message.length }} </p>
-  <p> {{ message.length ? message : 'No message' }} </p>
+  <p>{{ message === "Hello World" }}</p>
+  <p>{{ message.length }}</p>
+  <p>{{ message.length ? message : "No message" }}</p>
 
-  // property binding
+  <!-- property binding -->
   <p [innerText]="message"></p>
   <input type="text" [value]="message" />
+
+  <!-- event binding -->
+  <div>
+    <button (click)="onClick($event)">{{ newMessage }} </button>
+  </div>
+
+  <input [value]="message" (input)="handleInput($event)">
+
 </div>
