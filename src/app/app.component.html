@@ -21,4 +21,10 @@
   <input #messageInput [value]="message" (input)="newMessage = messageInput.value">
   <p>{{ messageInput.value }}</p>
 
+  <!-- two way binding -->
+
+  <p>Two-way data binding </p>
+  <input type="text" [(ngModel)] ="nome">
+  <p>Você digitou {{ nome }}</p>
+
 </div>

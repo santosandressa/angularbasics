@@ -9,6 +9,7 @@ export class AppComponent implements OnInit {
 
   message!: string;
   newMessage!: string;
+  nome: string = 'abc';
 
   ngOnInit() {
     this.message = 'This is a interpolated value';
