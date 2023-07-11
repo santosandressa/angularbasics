@@ -2,20 +2,30 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: ` <div class="app">Hello Angular!</div> `,
-  styles: [
-    `
-      .app {
-        margin-top: 50px;
-        font-size: 22px;
-        color: #fff;
-        text-align: center;
-      }
-    `,
-  ],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+
+  message!: string;
+  newMessage!: string;
+  nome: string = 'abc';
+
   ngOnInit() {
-    console.log('Hello World!');
+    this.message = 'This is a interpolated value';
   }
+
+  // event binding
+  onClick(event: Event) {
+    console.log(event);
+  }
+
+  handleInput(event: Event) {
+    const { value } = event.target as HTMLInputElement;
+    console.log(value);
+    this.newMessage = value;
+  }
+
+
+
 }
