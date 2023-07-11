@@ -23,15 +23,3 @@ jobs:
           npm run build --if-present
           npm run test
 
-      - name: Auto pull request
-        uses: repo-sync/pull-request@v2
-        with:
-          source_branch: ${{ github.ref }}
-          destination_branch: develop
-          pr_title: ${{ github.ref }}
-          pr_body: |
-            ${{ github.ref }}
-            ${{ github.event.head_commit.message }}
-            ${{ github.event.pull_request.html_url }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
